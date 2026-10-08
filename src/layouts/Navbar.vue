@@ -19,11 +19,17 @@
         <a href="#about" class="hover:text-indigo-400 transition-colors"
           >About</a
         >
+        <a href="#experience" class="hover:text-indigo-400 transition-colors"
+          >Experience</a
+        >
         <a href="#projects" class="hover:text-indigo-400 transition-colors"
           >Projects</a
         >
         <a href="#skills" class="hover:text-indigo-400 transition-colors"
           >Skills</a
+        >
+        <a href="#contact" class="hover:text-indigo-400 transition-colors"
+          >Contact</a
         >
       </div>
     </nav>

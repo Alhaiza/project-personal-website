@@ -11,6 +11,29 @@ export interface Project {
 }
 
 /**
+ * Interface untuk data riwayat karir atau pengalaman kerja.
+ * Digunakan pada modul timeline (ExperienceSection).
+ */
+export interface Experience {
+  id: number;
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  technologies: string[];
+}
+
+/**
+ * Interface untuk validasi state interaktif formulir kontak.
+ * Memastikan payload input memiliki tipe string yang pasti.
+ */
+export interface ContactMessage {
+  name: string;
+  email: string;
+  message: string;
+}
+
+/**
  * Interface untuk data profil utama.
  */
 export interface UserProfile {
@@ -20,4 +43,5 @@ export interface UserProfile {
   avatar: string;
   skills: string[];
   projects: Project[];
+  experiences: Experience[];
 }

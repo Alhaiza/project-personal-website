@@ -36,4 +36,24 @@ export const profileData: UserProfile = {
       link: "#",
     },
   ],
+  experiences: [
+    {
+      id: 1,
+      role: "Fullstack Developer",
+      company: "PT Bank Rakyat Indonesia (Persero) Tbk",
+      period: "2023 - Sekarang",
+      description:
+        "Membangun dan memelihara aplikasi BRI Trustee, mengimplementasikan event-driven architecture dengan Apache Kafka, Docker containerization, serta modern UI menggunakan Vue 3 & TypeScript.",
+      technologies: ["Vue 3", "TypeScript", "Tailwind CSS", "Docker", "Kafka", "PostgreSQL"],
+    },
+    {
+      id: 2,
+      role: "Web Application Specialist",
+      company: "Independent Projects / manpro.my.id",
+      period: "2022 - 2023",
+      description:
+        "Merancang arsitektur web modern, deployment server, konfigurasi domain, serta optimalisasi performa client-side dengan Vite dan Vue.",
+      technologies: ["Vue", "Vite", "Linux", "Nginx", "Node.js"],
+    },
+  ],
 };
