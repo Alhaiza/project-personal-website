@@ -13,7 +13,7 @@
   >
     <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <span class="text-white font-bold tracking-wider text-lg"
-        >SA<span class="text-indigo-400">.</span>Portofolio</span
+        >Alhaiza<span class="text-indigo-400">.</span></span
       >
       <div class="flex items-center gap-6 text-sm text-slate-300">
         <a href="#about" class="hover:text-indigo-400 transition-colors"
