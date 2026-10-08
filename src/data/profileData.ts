@@ -52,17 +52,37 @@ export const profileData: UserProfile = {
   experiences: [
     {
       id: 1,
-      role: "Backend Developer",
       company: "PT Dynamic Talenta Navigator",
-      period: "Agustus 2025 - Sekarang",
-      description:
-        "Mengembangkan dan mengoptimalkan layanan backend, arsitektur API terstruktur, serta integrasi sistem data yang scalable.",
-      technologies: ["PHP", "Laravel", "PostgreSQL", "Docker", "Git"],
+      location: "Semarang, Central Java, Indonesia",
+      workplaceType: "On-site",
+      totalDuration: "1 yr 3 mos",
+      positions: [
+        {
+          id: 101,
+          role: "Fullstack Developer",
+          employmentType: "Contract",
+          period: "Aug 2026 - Present",
+          duration: "3 mos",
+          description:
+            "Mengembangkan antarmuka interaktif dan arsitektur backend end-to-end, memastikan konsistensi alur data, performa rendering tinggi, dan skalabilitas modul sistem.",
+          technologies: ["Vue 3", "TypeScript", "Tailwind CSS", "Laravel", "PostgreSQL", "Docker"],
+        },
+        {
+          id: 102,
+          role: "Back End Developer",
+          employmentType: "Contract",
+          period: "Aug 2025 - Aug 2026",
+          duration: "1 yr 1 mo",
+          description:
+            "Mengembangkan layanan backend terstruktur, arsitektur API efisien, manajemen basis data, serta optimalisasi query menggunakan ekosistem Laravel.",
+          technologies: ["Laravel", "PHP", "Back-End Web Development", "PostgreSQL", "Docker", "Git"],
+        },
+      ],
     },
     {
       id: 2,
-      role: "Web Developer (Project-Based)",
       company: "Jurusan Informatika Universitas Tanjungpura",
+      role: "Web Developer (Project-Based)",
       period: "November 2024 - Juli 2025",
       description:
         "Membangun sistem manajemen magang berbasis web untuk mahasiswa, staf pengajar, dan pembimbing. Menerapkan pengajuan dan persetujuan dokumen online, tracking tugas, serta kontainerisasi aplikasi menggunakan Docker.",

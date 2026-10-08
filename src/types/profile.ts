@@ -11,16 +11,36 @@ export interface Project {
 }
 
 /**
+ * Interface untuk satu posisi/peran pekerjaan.
+ * Digunakan untuk mendukung riwayat multi-posisi / promosi dalam satu perusahaan.
+ */
+export interface ExperiencePosition {
+  id: number;
+  role: string;
+  employmentType?: string; // misal: "Contract", "Full-time"
+  period: string; // misal: "Agu 2026 - Sekarang"
+  duration?: string; // misal: "3 bln"
+  description?: string;
+  technologies?: string[];
+}
+
+/**
  * Interface untuk data riwayat karir atau pengalaman kerja.
- * Digunakan pada modul timeline (ExperienceSection).
+ * Mendukung single position langsung atau multi-posisi bertingkat (nested positions) seperti di LinkedIn.
  */
 export interface Experience {
   id: number;
-  role: string;
   company: string;
-  period: string;
-  description: string;
-  technologies: string[];
+  location?: string; // misal: "Semarang, Jawa Tengah, Indonesia"
+  workplaceType?: string; // misal: "On-site", "Remote", "Hybrid"
+  totalDuration?: string; // misal: "1 thn 3 bln"
+  // Format single position langsung (backward compatible)
+  role?: string;
+  period?: string;
+  description?: string;
+  technologies?: string[];
+  // Format multi-posisi dalam 1 perusahaan yang sama (hierarchical/nested)
+  positions?: ExperiencePosition[];
 }
 
 /**
