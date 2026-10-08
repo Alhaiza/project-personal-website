@@ -71,11 +71,11 @@ defineProps<{
             aria-hidden="true"
           ></div>
 
-          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
             <h4 class="text-base font-semibold text-slate-100">
               {{ pos.role }}
             </h4>
-            <span class="text-xs font-mono text-indigo-300">
+            <span class="text-xs font-mono font-medium px-2.5 py-1 rounded-full bg-indigo-950/80 text-indigo-300 border border-indigo-800/40 w-fit self-start sm:self-auto">
               {{ pos.period }}
             </span>
           </div>
