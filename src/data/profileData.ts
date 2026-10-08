@@ -53,8 +53,6 @@ export const profileData: UserProfile = {
     {
       id: 1,
       company: "PT Dynamic Talenta Navigator",
-      location: "Semarang, Central Java, Indonesia",
-      workplaceType: "On-site",
       positions: [
         {
           id: 101,

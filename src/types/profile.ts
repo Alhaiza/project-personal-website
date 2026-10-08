@@ -30,8 +30,6 @@ export interface ExperiencePosition {
 export interface Experience {
   id: number;
   company: string;
-  location?: string; // misal: "Semarang, Central Java, Indonesia"
-  workplaceType?: string; // misal: "On-site", "Remote", "Hybrid"
   // Format single position langsung (backward compatible)
   role?: string;
   period?: string;

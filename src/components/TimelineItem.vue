@@ -37,18 +37,11 @@ defineProps<{
     <div
       class="bg-slate-900/60 border border-slate-800 p-5 sm:p-6 rounded-2xl hover:border-indigo-500/40 hover:bg-slate-900/90 transition-all duration-300 shadow-md"
     >
-      <!-- Header Nama Perusahaan & Meta Info -->
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
-        <div>
-          <h3 class="text-lg font-bold text-white tracking-wide group-hover:text-indigo-300 transition-colors">
-            {{ experience.company }}
-          </h3>
-          <p v-if="experience.location || experience.workplaceType" class="text-xs text-slate-400 mt-0.5">
-            <span v-if="experience.location">{{ experience.location }}</span>
-            <span v-if="experience.location && experience.workplaceType"> • </span>
-            <span v-if="experience.workplaceType">{{ experience.workplaceType }}</span>
-          </p>
-        </div>
+      <!-- Header Nama Perusahaan & Badge Waktu (Untuk Single Posisi) -->
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+        <h3 class="text-lg font-bold text-white tracking-wide group-hover:text-indigo-300 transition-colors">
+          {{ experience.company }}
+        </h3>
         <!-- Single position period badge (jika tidak punya sub-positions) -->
         <span
           v-if="!experience.positions && experience.period"
