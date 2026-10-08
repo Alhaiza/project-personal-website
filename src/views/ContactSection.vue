@@ -133,11 +133,19 @@ const handleSubmit = async () => {
         <div class="space-y-4 text-sm text-slate-300">
           <div class="flex items-center gap-3">
             <span class="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 text-xs font-mono">@</span>
-            <span>contact@manpro.my.id</span>
+            <span>alqadrihaiza@gmail.com</span>
           </div>
           <div class="flex items-center gap-3">
-            <span class="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 text-xs font-mono">ID</span>
-            <span>Indonesia (WIB / UTC+7)</span>
+            <span class="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 text-xs font-mono">IN</span>
+            <a href="https://www.linkedin.com/in/alhaiza" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">linkedin.com/in/alhaiza</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 text-xs font-mono">GH</span>
+            <a href="https://github.com/Alhaiza" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">github.com/Alhaiza</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-indigo-950/60 border border-indigo-800/40 flex items-center justify-center text-indigo-400 text-xs font-mono">LOC</span>
+            <span>Pontianak, Indonesia (WIB / UTC+7)</span>
           </div>
         </div>
       </div>

@@ -6,54 +6,85 @@ import type { UserProfile } from "../types/profile";
  */
 export const profileData: UserProfile = {
   name: "Syarif Muhammad Alhaiza",
-  role: "Fullstack Developer",
-  bio: "Fokus pada efisiensi, presisi, dan penghematan token. Membangun aplikasi web modern yang responsif dan berkinerja tinggi.",
+  role: "Backend & Web Developer",
+  bio: "Bachelor of Computer Science graduate dan Web Developer berpengalaman dalam membangun sistem web andal dan scalable menggunakan PHP, Laravel, TypeScript, serta Docker. Berfokus pada arsitektur backend terstruktur, UI modern, dan clean code.",
   avatar:
     "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80",
   skills: [
-    "Vue",
-    "Typescript",
-    "Tailwind CSS",
+    "PHP",
+    "Laravel",
+    "JavaScript",
     "Node.js",
-    "Docker",
+    "Vue 3",
+    "TypeScript",
+    "Tailwind CSS",
+    "MySQL",
     "PostgreSQL",
+    "Docker",
+    "Git",
   ],
   projects: [
     {
       id: 1,
-      title: "BRI Trustee Application",
+      title: "Informatics UNTAN Internship Management App",
       description:
-        "Mengembangkan backend services, frontend interfaces, dan deployment pipelines menggunakan Kafka dan Docker.",
-      tags: ["Vue", "TypeScript", "Tailwind", "Docker"],
+        "Platform web manajemen magang untuk menyederhanakan alur kerja mahasiswa, dosen, dan supervisor. Dilengkapi fitur persetujuan dokumen online, task tracking, serta komunikasi terpusat yang diintegrasikan dengan Docker.",
+      tags: ["Laravel", "PHP", "JavaScript", "Bootstrap CSS", "Docker", "Git"],
       link: "#",
     },
     {
       id: 2,
-      title: "Personal Web Project (manpro.my.id)",
+      title: "Informatics UNTAN Laboratory Inventory App with QR Code",
       description:
-        "Memelihara domain hosting, server configuration, dan optimasi performa web pribadi.",
-      tags: ["Vite", "Vue", "Tailwind"],
+        "Sistem inventaris laboratorium berbasis web dengan pelacakan aset menggunakan QR code unik, manajemen hak akses berbasis peran (RBAC Admin & Superadmin), dan peningkatan akuntabilitas data.",
+      tags: ["PHP", "Laravel", "MySQL", "QR Code", "JavaScript"],
+      link: "#",
+    },
+    {
+      id: 3,
+      title: "Personal Web Portfolio & Knowledge Hub",
+      description:
+        "Situs profil profesional dan cheatsheet frontend berbasis Vue 3 Composition API, Vite, TypeScript, dan Tailwind CSS v4 dengan pemisahan lapisan arsitektur modular.",
+      tags: ["Vue 3", "TypeScript", "Tailwind CSS", "Vite"],
       link: "#",
     },
   ],
   experiences: [
     {
       id: 1,
-      role: "Fullstack Developer",
-      company: "PT Bank Rakyat Indonesia (Persero) Tbk",
-      period: "2023 - Sekarang",
+      role: "Backend Developer",
+      company: "PT Dynamic Talenta Navigator",
+      period: "Agustus 2025 - Sekarang",
       description:
-        "Membangun dan memelihara aplikasi BRI Trustee, mengimplementasikan event-driven architecture dengan Apache Kafka, Docker containerization, serta modern UI menggunakan Vue 3 & TypeScript.",
-      technologies: ["Vue 3", "TypeScript", "Tailwind CSS", "Docker", "Kafka", "PostgreSQL"],
+        "Mengembangkan dan mengoptimalkan layanan backend, arsitektur API terstruktur, serta integrasi sistem data yang scalable.",
+      technologies: ["PHP", "Laravel", "PostgreSQL", "Docker", "Git"],
     },
     {
       id: 2,
-      role: "Web Application Specialist",
-      company: "Independent Projects / manpro.my.id",
-      period: "2022 - 2023",
+      role: "Web Developer (Project-Based)",
+      company: "Jurusan Informatika Universitas Tanjungpura",
+      period: "November 2024 - Juli 2025",
       description:
-        "Merancang arsitektur web modern, deployment server, konfigurasi domain, serta optimalisasi performa client-side dengan Vite dan Vue.",
-      technologies: ["Vue", "Vite", "Linux", "Nginx", "Node.js"],
+        "Membangun sistem manajemen magang berbasis web untuk mahasiswa, staf pengajar, dan pembimbing. Menerapkan pengajuan dan persetujuan dokumen online, tracking tugas, serta kontainerisasi aplikasi menggunakan Docker.",
+      technologies: ["Laravel", "PHP", "Blade", "HTML/CSS", "Docker", "Git"],
+    },
+    {
+      id: 3,
+      role: "Full-Stack Web Developer Intern",
+      company: "PT. Inovasi Hijau Sangkabira",
+      period: "Maret 2024 - Mei 2024",
+      description:
+        "Membangun aplikasi server-side Laravel dan antarmuka interaktif, mengelola integritas data PostgreSQL, serta mengimplementasikan modul CRUD dinamis untuk dashboard admin.",
+      technologies: ["Laravel", "PostgreSQL", "JavaScript", "HTML/CSS", "Git"],
+    },
+    {
+      id: 4,
+      role: "Web Developer Internship",
+      company: "Jurusan Informatika Universitas Tanjungpura",
+      period: "September 2023 - November 2023",
+      description:
+        "Mengembangkan aplikasi pelacakan inventaris menggunakan PHP, merancang skema basis data MySQL, serta membangun modul entri dan scanning data.",
+      technologies: ["PHP", "MySQL", "JavaScript", "Git"],
     },
   ],
 };
