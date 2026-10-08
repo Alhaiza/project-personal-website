@@ -55,14 +55,12 @@ export const profileData: UserProfile = {
       company: "PT Dynamic Talenta Navigator",
       location: "Semarang, Central Java, Indonesia",
       workplaceType: "On-site",
-      totalDuration: "1 yr 3 mos",
       positions: [
         {
           id: 101,
           role: "Fullstack Developer",
           employmentType: "Contract",
           period: "Aug 2026 - Present",
-          duration: "3 mos",
           description:
             "Mengembangkan antarmuka interaktif dan arsitektur backend end-to-end, memastikan konsistensi alur data, performa rendering tinggi, dan skalabilitas modul sistem.",
           technologies: ["Vue 3", "TypeScript", "Tailwind CSS", "Laravel", "PostgreSQL", "Docker"],
@@ -72,7 +70,6 @@ export const profileData: UserProfile = {
           role: "Back End Developer",
           employmentType: "Contract",
           period: "Aug 2025 - Aug 2026",
-          duration: "1 yr 1 mo",
           description:
             "Mengembangkan layanan backend terstruktur, arsitektur API efisien, manajemen basis data, serta optimalisasi query menggunakan ekosistem Laravel.",
           technologies: ["Laravel", "PHP", "Back-End Web Development", "PostgreSQL", "Docker", "Git"],

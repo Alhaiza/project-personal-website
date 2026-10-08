@@ -18,8 +18,7 @@ export interface ExperiencePosition {
   id: number;
   role: string;
   employmentType?: string; // misal: "Contract", "Full-time"
-  period: string; // misal: "Agu 2026 - Sekarang"
-  duration?: string; // misal: "3 bln"
+  period: string; // misal: "Aug 2026 - Present"
   description?: string;
   technologies?: string[];
 }
@@ -31,9 +30,8 @@ export interface ExperiencePosition {
 export interface Experience {
   id: number;
   company: string;
-  location?: string; // misal: "Semarang, Jawa Tengah, Indonesia"
+  location?: string; // misal: "Semarang, Central Java, Indonesia"
   workplaceType?: string; // misal: "On-site", "Remote", "Hybrid"
-  totalDuration?: string; // misal: "1 thn 3 bln"
   // Format single position langsung (backward compatible)
   role?: string;
   period?: string;

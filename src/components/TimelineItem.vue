@@ -43,11 +43,10 @@ defineProps<{
           <h3 class="text-lg font-bold text-white tracking-wide group-hover:text-indigo-300 transition-colors">
             {{ experience.company }}
           </h3>
-          <p v-if="experience.location || experience.workplaceType || experience.totalDuration" class="text-xs text-slate-400 mt-0.5">
-            <span v-if="experience.totalDuration" class="font-medium text-slate-300">{{ experience.totalDuration }}</span>
-            <span v-if="experience.totalDuration && (experience.location || experience.workplaceType)"> • </span>
+          <p v-if="experience.location || experience.workplaceType" class="text-xs text-slate-400 mt-0.5">
             <span v-if="experience.location">{{ experience.location }}</span>
-            <span v-if="experience.workplaceType"> ({{ experience.workplaceType }})</span>
+            <span v-if="experience.location && experience.workplaceType"> • </span>
+            <span v-if="experience.workplaceType">{{ experience.workplaceType }}</span>
           </p>
         </div>
         <!-- Single position period badge (jika tidak punya sub-positions) -->
@@ -77,7 +76,7 @@ defineProps<{
               {{ pos.role }}
             </h4>
             <span class="text-xs font-mono text-indigo-300">
-              {{ pos.period }} <span v-if="pos.duration" class="text-slate-400">· {{ pos.duration }}</span>
+              {{ pos.period }}
             </span>
           </div>
 

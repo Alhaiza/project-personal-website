@@ -96,7 +96,7 @@ npm run preview
 3. **Experience Timeline Module (`ExperienceSection.vue` & `TimelineItem.vue`)**
    - **Data Input (Props):** `experiences: Experience[]`
    - **Struktur Hierarki Data:** Mendukung format *single role* langsung maupun *nested positions* (`positions?: ExperiencePosition[]`) untuk merepresentasikan transisi atau promosi jabatan dalam satu perusahaan yang sama (mirip arsitektur timeline LinkedIn).
-   - **Fungsi:** Visualisasi vertikal perjalanan karir/proyek dengan status, badge periode, durasi total, dan deskripsi teknis per posisi.
+   - **Fungsi:** Visualisasi vertikal perjalanan karir/proyek dengan status, badge range periode waktu (tanpa kalkulasi total durasi manual), dan deskripsi teknis per posisi.
 
 4. **Showcase Projects Module (`ProjectSection.vue`)**
    - **Data Input (Props):** `projects: Project[]`, `skills: string[]`
