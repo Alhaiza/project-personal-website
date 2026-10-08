@@ -40,34 +40,34 @@ const validateForm = (): boolean => {
   let isValid = true;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // Validasi Nama
+  // Validate Name
   if (!form.name.trim()) {
-    errors.name = "Nama lengkap wajib diisi.";
+    errors.name = "Full name is required.";
     isValid = false;
   } else if (form.name.trim().length < 2) {
-    errors.name = "Nama minimal terdiri dari 2 karakter.";
+    errors.name = "Name must be at least 2 characters.";
     isValid = false;
   } else {
     errors.name = "";
   }
 
-  // Validasi Email
+  // Validate Email
   if (!form.email.trim()) {
-    errors.email = "Alamat email wajib diisi.";
+    errors.email = "Email address is required.";
     isValid = false;
   } else if (!emailRegex.test(form.email.trim())) {
-    errors.email = "Format alamat email tidak valid (contoh: user@domain.com).";
+    errors.email = "Invalid email format (e.g., user@domain.com).";
     isValid = false;
   } else {
     errors.email = "";
   }
 
-  // Validasi Pesan
+  // Validate Message
   if (!form.message.trim()) {
-    errors.message = "Pesan konsultasi atau salam wajib diisi.";
+    errors.message = "Message is required.";
     isValid = false;
   } else if (form.message.trim().length < 10) {
-    errors.message = "Pesan minimal terdiri dari 10 karakter.";
+    errors.message = "Message must be at least 10 characters.";
     isValid = false;
   } else {
     errors.message = "";
@@ -90,20 +90,20 @@ const handleSubmit = async () => {
   submitStatus.value = "idle";
 
   try {
-    // Mensimulasikan network latency request asynchronous (1 detik)
+    // Simulate async network request (1s)
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // Reset nilai form jika sukses (Positive Case)
+    // Reset form values on success (Positive Case)
     form.name = "";
     form.email = "";
     form.message = "";
 
     submitStatus.value = "success";
-    feedbackMessage.value = "Pesan Anda berhasil dikirim! Saya akan segera merespons.";
+    feedbackMessage.value = "Your message has been sent successfully! I will get back to you shortly.";
   } catch {
-    // Negative/Anomaly Case: Simulasi kegagalan transmisi jaringan
+    // Negative/Anomaly Case
     submitStatus.value = "error";
-    feedbackMessage.value = "Terjadi kendala saat mengirimkan pesan. Silakan coba kembali.";
+    feedbackMessage.value = "An issue occurred while sending your message. Please try again.";
   } finally {
     isSubmitting.value = false;
   }
@@ -117,17 +117,16 @@ const handleSubmit = async () => {
         Get in Touch
       </h2>
       <p class="text-slate-400 text-sm pl-4">
-        Mari berdiskusi mengenai arsitektur sistem, kolaborasi proyek, atau bertukar wawasan teknis.
+        Let's discuss system architecture, potential collaborations, or exchange technical insights.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-      <!-- Info Box (Kiri) -->
+      <!-- Info Box (Left) -->
       <div class="md:col-span-5 bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 sm:p-8">
-        <h3 class="text-xl font-bold text-white mb-4">Informasi Kontak</h3>
+        <h3 class="text-xl font-bold text-white mb-4">Contact Information</h3>
         <p class="text-slate-400 text-sm leading-relaxed mb-6">
-          Terbuka untuk diskusi proyek frontend berskala besar, optimasi performa Vite/Vue,
-          dan arsitektur berbasis TypeScript.
+          Open for technical discussions on large-scale frontend and backend applications, Vite/Vue performance tuning, and structured TypeScript development.
         </p>
 
         <div class="space-y-4 text-sm text-slate-300">
@@ -150,19 +149,19 @@ const handleSubmit = async () => {
         </div>
       </div>
 
-      <!-- Formulir Interaktif (Kanan) -->
+      <!-- Interactive Form (Right) -->
       <div class="md:col-span-7 bg-slate-900/50 border border-slate-800 rounded-2xl p-6 sm:p-8">
         <form @submit.prevent="handleSubmit" novalidate class="space-y-5">
-          <!-- Input Field: Nama -->
+          <!-- Input Field: Name -->
           <div>
             <label for="contact-name" class="block text-xs font-medium text-slate-300 mb-2">
-              Nama Lengkap
+              Full Name
             </label>
             <input
               id="contact-name"
               v-model="form.name"
               type="text"
-              placeholder="Contoh: Syarif Muhammad"
+              placeholder="e.g., Syarif Muhammad"
               :class="[
                 'w-full px-4 py-2.5 rounded-xl bg-slate-950 border text-sm text-white placeholder-slate-500 focus:outline-none transition-all duration-200',
                 errors.name
@@ -178,7 +177,7 @@ const handleSubmit = async () => {
           <!-- Input Field: Email -->
           <div>
             <label for="contact-email" class="block text-xs font-medium text-slate-300 mb-2">
-              Alamat Email
+              Email Address
             </label>
             <input
               id="contact-email"
@@ -197,16 +196,16 @@ const handleSubmit = async () => {
             </p>
           </div>
 
-          <!-- Input Field: Pesan -->
+          <!-- Input Field: Message -->
           <div>
             <label for="contact-message" class="block text-xs font-medium text-slate-300 mb-2">
-              Pesan atau Pertanyaan
+              Message or Inquiry
             </label>
             <textarea
               id="contact-message"
               v-model="form.message"
               rows="4"
-              placeholder="Tuliskan detail pesan Anda di sini..."
+              placeholder="Write your message here..."
               :class="[
                 'w-full px-4 py-2.5 rounded-xl bg-slate-950 border text-sm text-white placeholder-slate-500 focus:outline-none transition-all duration-200 resize-none',
                 errors.message
@@ -219,13 +218,7 @@ const handleSubmit = async () => {
             </p>
           </div>
 
-          <!--
-            ============================================================================
-            [KONSEP VUE 3: TRANSITION COMPONENT UNTUK NOTIFIKASI UMPAN BALIK]
-            Vue <Transition> otomatis menambahkan kelas CSS transisi saat elemen
-            dirender (enter) atau dihapus (leave) dari DOM.
-            ============================================================================
-          -->
+          <!-- Feedback Notification Banner -->
           <Transition
             enter-active-class="transition duration-300 ease-out"
             enter-from-class="transform -translate-y-2 opacity-0"
@@ -245,7 +238,7 @@ const handleSubmit = async () => {
             </div>
           </Transition>
 
-          <!-- Tombol Kirim dengan micro-interaction Tailwind -->
+          <!-- Submit Button -->
           <button
             type="submit"
             :disabled="isSubmitting"
@@ -261,7 +254,7 @@ const handleSubmit = async () => {
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
             </svg>
-            <span>{{ isSubmitting ? "Mengirim Pesan..." : "Kirim Pesan" }}</span>
+            <span>{{ isSubmitting ? "Sending Message..." : "Send Message" }}</span>
           </button>
         </form>
       </div>

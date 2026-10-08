@@ -106,6 +106,7 @@ npm run preview
    - **State Lokal:** `contactForm: ContactMessage` (reaktif via `ref`)
    - **Validasi:** `errors: Record<keyof ContactMessage, string>` dengan aturan validasi TypeScript presisi (format email, panjang pesan minimum).
    - **Event Flow:** Menangani submit lokal, menampilkan transisi pesan sukses/gagal, dan reset state form.
+   - **Bahasa Antarmuka:** Seluruh UI copy dan pesan validasi distandardisasi dalam Bahasa Inggris profesional.
 
 ---
 

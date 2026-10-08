@@ -26,7 +26,7 @@ defineProps<{
         Professional Journey
       </h2>
       <p class="text-slate-400 text-sm pl-4">
-        Rekam jejak pengalaman teknis dalam rekayasa perangkat lunak dan arsitektur web modern.
+        Track record of technical experience in software engineering and modern web architecture.
       </p>
     </div>
 
@@ -55,7 +55,7 @@ defineProps<{
       v-else
       class="text-center py-12 border border-dashed border-slate-800 rounded-2xl p-6 bg-slate-900/30"
     >
-      <p class="text-slate-500 text-sm">Belum ada riwayat pengalaman yang ditambahkan.</p>
+      <p class="text-slate-500 text-sm">No experience records available yet.</p>
     </div>
   </section>
 </template>

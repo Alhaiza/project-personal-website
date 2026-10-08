@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from "vue";
 import type { UserProfile } from "../types/profile";
 /**
  * Konsep Dasar Vue 3: defineProps
@@ -48,8 +47,13 @@ defineProps<{
       <div class="mt-8 flex justify-center md:justify-start gap-4">
         <a
           href="#projects"
-          class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition shadow-lg shadow-indigo-600/20"
-          >Lihat Proyek</a
+          class="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-xl transition shadow-lg shadow-indigo-600/20 active:scale-95"
+          >View Projects</a
+        >
+        <a
+          href="#contact"
+          class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium rounded-xl border border-slate-800 transition active:scale-95"
+          >Get in Touch</a
         >
       </div>
     </div>
